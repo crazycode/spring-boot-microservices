@@ -1,16 +1,15 @@
 package com.rohitghatol.microservices.task.apis;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import com.rohitghatol.microservices.task.dtos.TaskDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rohitghatol.microservices.task.dtos.TaskDTO;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * REST endpoint for the task functionality
@@ -64,7 +63,7 @@ public class TaskController {
 	/**
 	 * Get tasks for specific user that is passed in
 	 * 
-	 * @param taskId
+	 * @param userName
 	 * @return
 	 */
 	@RequestMapping(value = "/usertask/{userName}", method = RequestMethod.GET, headers = "Accept=application/json")

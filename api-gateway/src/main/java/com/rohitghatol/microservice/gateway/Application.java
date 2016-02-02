@@ -48,9 +48,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@EnableZuulProxy
+//@EnableZuulProxy
 @EnableEurekaClient
-@EnableOAuth2Sso
+//@EnableOAuth2Sso
 public class Application {
 
 	/**

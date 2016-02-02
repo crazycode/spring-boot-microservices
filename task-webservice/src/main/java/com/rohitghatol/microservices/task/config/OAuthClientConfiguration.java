@@ -21,13 +21,13 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableOAuth2Client
 public class OAuthClientConfiguration {
 
-	@Value("${spring.oauth2.client.userAuthorizationUri}")
+	@Value("${security.oauth2.client.userAuthorizationUri}")
 	private String authorizeUrl;
 
-	@Value("${spring.oauth2.client.accessTokenUri}")
+	@Value("${security.oauth2.client.accessTokenUri}")
 	private String tokenUrl;
 
-	@Value("${spring.oauth2.client.clientId}")
+	@Value("${security.oauth2.client.clientId}")
 	private String clientId;
 
 	/**

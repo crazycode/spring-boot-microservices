@@ -22,7 +22,7 @@ import org.springframework.context.annotation.ComponentScan;
  * <li>The security is enabled to be covered by OAuth2 access token using the
  * {@link EnableOAuth2Resource} annotation. The URL from where the user would be
  * authenticated is provided by the
- * <code>spring.oauth2.resource.userInfoUri</code> property defined in the
+ * <code>spring.security.resource.userInfoUri</code> property defined in the
  * external configuration.</li>
  * <li>{@link EnableEurekaClient} makes the app into both a Eureka "instance" (i.e. it
  * registers itself) and a "client" (i.e. it can query the registry to locate

@@ -1,14 +1,5 @@
 package com.rohitghatol.microservice.gateway.config;
 
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.cloud.security.oauth2.sso.OAuth2SsoConfigurerAdapter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -21,6 +12,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.WebUtils;
 
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 
 /**
  * The Class OAuthConfiguration that sets up the OAuth2 single sign on
@@ -32,12 +31,7 @@ public class OAuthConfiguration extends OAuth2SsoConfigurerAdapter {
 	
 	private static final String CSRF_COOKIE_NAME = "XSRF-TOKEN";
 	private static final String CSRF_ANGULAR_HEADER_NAME = "X-XSRF-TOKEN";
-	
-	@Override
-	public void match(RequestMatchers matchers) {
-		matchers.anyRequest();
-	}
-	
+
 	/**
 	 * Define the security that applies to the proxy
 	 */
